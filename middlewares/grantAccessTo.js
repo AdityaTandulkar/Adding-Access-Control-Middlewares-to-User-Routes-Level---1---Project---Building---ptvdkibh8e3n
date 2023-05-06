@@ -20,7 +20,7 @@ function grantAccessTo(roles) {
         - Return a valid response if access cannot be granted.
         */
     return function (req, res, next) {
-      console.log(roles)
+      const role = req.body.role;
       if(role && roles.includes(role)){
         next();
         return;
